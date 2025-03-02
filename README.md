@@ -6,16 +6,6 @@ A **functional landing page** designed to **gather class-action plaintiffs** wit
 
 ---
 
-## **🚀 Deployment**  
-
-The project is deployed using **Docker**:  
-```sh
-docker-compose up --build -d
-```
-However, it can also be run manually.  
-
----
-
 ## **🔗 Cloning and Running the Project**  
 
 To set up the project, follow these steps:
@@ -25,13 +15,7 @@ To set up the project, follow these steps:
 git clone https://github.com/axshaman/digitalrefund_front.git
 cd digitalrefund_front
 ```
-
-### **2️⃣ Install Dependencies (if running manually)**  
-```sh
-npm install
-```
-
-### **3️⃣ Configure Environment Variables**  
+### **2️⃣ Configure Environment Variables**  
 Create a `.env` file in the project root (`/swiss/` or modified directory) and add:  
 
 ```ini
@@ -39,7 +23,7 @@ VITE_SYSTEM_EMAIL=""  # Email to receive copies of messages
 VITE_SECRET_KEY=""     # HMAC key must match backend  
 ```
 
-### **4️⃣ Run the Project**  
+### **3️⃣ Run the Project**  
 
 - **Using Docker:**  
   ```sh
@@ -48,6 +32,7 @@ VITE_SECRET_KEY=""     # HMAC key must match backend
 
 - **Manually (for development):**  
   ```sh
+  npm install
   npm run dev
   ```
 
@@ -103,15 +88,6 @@ Submitted form data is **securely sent via API** to the backend in the following
 }
 ```
 *(Make sure `SECRET_KEY` is properly configured for HMAC verification.)*  
-
----
-
-## **🌐 Recommended Ports**  
-
-- **Frontend (Vite) → `8080`**  
-- **Backend API (if running separately) → `8498`**  
-
-These can be changed in **`docker-compose.yaml`** if needed.
 
 ---
 
