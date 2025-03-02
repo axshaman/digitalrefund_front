@@ -1,6 +1,5 @@
-### **README.md for GitHub**  
+## **README.md for GitHub**  
 
-```md
 # **Class-Action Lawsuit Landing Page**  
 
 A **functional landing page** designed to **gather class-action plaintiffs** with a **secure data submission form** and **automatic PDF generation** for primary claim registration.  
@@ -14,6 +13,43 @@ The project is deployed using **Docker**:
 docker-compose up --build -d
 ```
 However, it can also be run manually.  
+
+---
+
+## **🔗 Cloning and Running the Project**  
+
+To set up the project, follow these steps:
+
+### **1️⃣ Clone the Repository**  
+```sh
+git clone https://github.com/axshaman/digitalrefund_front.git
+cd digitalrefund_front
+```
+
+### **2️⃣ Install Dependencies (if running manually)**  
+```sh
+npm install
+```
+
+### **3️⃣ Configure Environment Variables**  
+Create a `.env` file in the project root (`/swiss/` or modified directory) and add:  
+
+```ini
+VITE_SYSTEM_EMAIL=""  # Email to receive copies of messages  
+VITE_SECRET_KEY=""     # HMAC key must match backend  
+```
+
+### **4️⃣ Run the Project**  
+
+- **Using Docker:**  
+  ```sh
+  docker-compose up --build -d
+  ```
+
+- **Manually (for development):**  
+  ```sh
+  npm run dev
+  ```
 
 ---
 
@@ -70,6 +106,15 @@ Submitted form data is **securely sent via API** to the backend in the following
 
 ---
 
+## **🌐 Recommended Ports**  
+
+- **Frontend (Vite) → `8080`**  
+- **Backend API (if running separately) → `8498`**  
+
+These can be changed in **`docker-compose.yaml`** if needed.
+
+---
+
 ## **🔒 Privacy & Security**  
 
 - **GDPR Compliant:** Ensure **Privacy Policy** is placed in `/public/`.  
@@ -86,6 +131,3 @@ Submitted form data is **securely sent via API** to the backend in the following
 ## **📜 License**  
 This project is open-source. Feel free to contribute!  
 ```
-
-🚀 **Now your project is ready for GitHub!**  
-Let me know if you need modifications. 😊
